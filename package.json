@@ -1,11 +1,11 @@
 {
     "name": "handlebars.el.form",
     "description": "Handlebars helper for generating form elements",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "handlebars.el.form.js",
     "repository": {
         "type": "git",
-        "url": "git://github.com/solidgoldpig/handlebars.el.form.git#1.0.0"
+        "url": "git://github.com/solidgoldpig/handlebars.el.form.git#1.0.1"
     },
     "homepage": "http://el.form.handlebars.solidgoldpig.com",
     "bugs": "https://github.com/solidgoldpig/handlebars.el.form/issues",
@@ -14,11 +14,15 @@
         "helper",
         "html",
         "element",
-        "form"
+        "form",
+        "input",
+        "textarea",
+        "select",
+        "control"
     ],
     "dependencies": {
-        "handlebars.el": "1.0.0",
-        "handlebars.phrase": "1.0.2"
+        "handlebars.el": "1.0.1",
+        "handlebars.phrase": "1.0.4"
     },
     "devDependencies": {
         "handlebars.choice": "1.0.0",
@@ -28,7 +32,7 @@
     },
     "scripts": {
         "test": "./node_modules/jasmine-node/bin/jasmine-node spec",
-        "test:info": "npm test -- --verbose --config loglevel info"
+        "test:output": "npm test -- --verbose --config loglevel info"
     },
     "author": {
         "name": "Alex Robinson",

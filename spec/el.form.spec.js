@@ -11,7 +11,7 @@ require("handlebars.choice").registerHelpers(Handlebars);
 var Phrase = require("handlebars.phrase");
 
 Phrase.locale("en");
-Phrase.setLanguages({
+Phrase.addLanguages({
     "en": {
         "field.message.heading.error": "There {{#choose count}}{{#choice \"other\"}}are {{count}} problems{{/choice}}{{#choice \"one\"}}is a problem{{/choice}}{{/choose}} with the \"{{field}}\" field",
         "foo.bar.description": "Bar description",
