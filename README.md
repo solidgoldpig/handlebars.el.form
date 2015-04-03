@@ -1,0 +1,1 @@
+Auto-generated documentation for handlebars.el.form
