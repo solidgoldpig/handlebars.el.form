@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Module: handlebars.el.form</title>
+
+    <script src="scripts/jquery-1.11.2.min.js"> </script>
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title"><small>Module</small> handlebars.el.form</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+
+    
+
+    
+    
+    
+    
+    
+
+
+    
+        
+    
+
+    
+        
+            <div class="description"><p>Provides helper to generate form elements</p>
+<pre class="prettyprint source"><code> var Handlebars = require(&quot;handlebars&quot;);
+ var FormHelper = require(&quot;handlebars.el.form&quot;);
+ FormHelper.registerHelper(Handlebars);</code></pre></div>
+        
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="handlebars.el.form.js.html">handlebars.el.form.js</a>, <a href="handlebars.el.form.js.html#line8">line 8</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="returns">Returns</h5>
+
+        
+<div class="param-desc">
+    <p>FormHelper instance</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".registerHelpers"><span class="type-signature">(static) </span>registerHelpers<span class="signature">(hbars)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Register FormHelper helpers with Handlebars</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>hbars</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Handlebars instance</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="handlebars.el.form.js.html">handlebars.el.form.js</a>, <a href="handlebars.el.form.js.html#line1549">line 1549</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        
+            
+
+    
+
+    <h4 class="name" id="~inputHelper"><span class="type-signature">(inner) </span>inputHelper<span class="signature">(0, id<span class="signature-attributes">opt</span>, name<span class="signature-attributes">opt</span>, value<span class="signature-attributes">opt</span>, el-control<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Generic method to handle output of all input elements</p>
+<p>Accepts any parameter that the <em>el</em> helper takes since it is built upon it</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>0</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Input type</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Control id</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Control name</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Control value</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>el-control</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Wjether or not to treat output as a control or to be displayed</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="handlebars.el.form.js.html">handlebars.el.form.js</a>, <a href="handlebars.el.form.js.html#line71">line 71</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="returns">Returns</h5>
+
+        
+<div class="param-desc">
+    <p>Input field</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+            
+        
+            
+
+    
+
+    <h4 class="name" id="~marshallNamespacedAttributes"><span class="type-signature">(private, inner) </span>marshallNamespacedAttributes<span class="signature">(namespace, attributes)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Used by el-field to allow for passing of multi-variate attributes</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>namespace</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Property name to marshall</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>attributes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Attributes to retrieve property from</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="handlebars.el.form.js.html">handlebars.el.form.js</a>, <a href="handlebars.el.form.js.html#line636">line 636</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="returns">Returns</h5>
+
+        
+<div class="param-desc">
+    <p>attributes</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+            
+        
+            
+
+    
+
+    <h4 class="name" id="~normaliseParamArray"><span class="type-signature">(private, inner) </span>normaliseParamArray<span class="signature">(param)</span><span class="type-signature"> &rarr; {array}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Ensures that all items of the passed param are stringified</p>
+<p>If param is not an array, it is first wrapped in an array.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>param</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Parameters to be normalised</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="handlebars.el.form.js.html">handlebars.el.form.js</a>, <a href="handlebars.el.form.js.html#line258">line 258</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="returns">Returns</h5>
+
+        
+<div class="param-desc">
+    <p>param</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+            
+        
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3 class="modules">Modules</h3><ul><li><a href="module-handlebars%2525el%2525form.html">handlebars.el.form</a></li></ul><h3 class="template-helpers">Template helpers</h3><ul><li><a href="template-el-checkbox.html">el-checkbox</a></li><li><a href="template-el-field.html">el-field</a></li><li><a href="template-el-fieldset.html">el-fieldset</a></li><li><a href="template-el-file.html">el-file</a></li><li><a href="template-el-form.html">el-form</a></li><li><a href="template-el-hidden.html">el-hidden</a></li><li><a href="template-el-label.html">el-label</a></li><li><a href="template-el-message.html">el-message</a></li><li><a href="template-el-password.html">el-password</a></li><li><a href="template-el-radio.html">el-radio</a></li><li><a href="template-el-select.html">el-select</a></li><li><a href="template-el-submit.html">el-submit</a></li><li><a href="template-el-text.html">el-text</a></li><li><a href="template-el-textarea.html">el-textarea</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-beta1</a>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

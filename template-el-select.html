@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Template helper: el-select</title>
+
+    <script src="scripts/jquery-1.11.2.min.js"> </script>
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title"><small>Template helper</small> el-select</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors template-ancestors">
+                
+                    <a href="module-handlebars%2525el%2525form.html">handlebars.el.form</a>
+                
+            </span>
+        
+        <!-- el-select -->
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+
+    
+
+    
+    
+    
+    
+    
+
+
+    
+
+    
+        
+            <div class="description"><p>Outputs a select control</p>
+<pre class="prettyprint source"><code>{{{el-select name=name options=options}}}</code></pre><h3>Examples</h3><pre class="prettyprint source"><code>{{{el-select name=&quot;foo&quot; options=opts}}}
+Context {opts:[&quot;a&quot;, &quot;b&quot;]}
+→  &lt;select name=&quot;foo&quot;>
+     &lt;option value=&quot;a&quot;>a&lt;/option>
+     &lt;option value=&quot;b&quot;>b&lt;/option>
+   &lt;/select>
+
+{{{el-select options=opts}}}
+Context {opts: [{content:&quot;Foo&quot;, value:1}, {content:&quot;Bar&quot;, value:2}] }
+→  &lt;select>
+     &lt;option value=&quot;1&quot;>Foo&lt;/option>
+     &lt;option value=&quot;2&quot;>Bar&lt;/option>
+   &lt;/select>
+
+{{{el-select options=opts}}}
+Context {opts: [{content:&quot;Foo&quot;, value:1}, {content:&quot;Bar&quot;, value:2, selected:true}] }
+→  &lt;select>
+     &lt;option value=&quot;1&quot;>Foo&lt;/option>
+     &lt;option selected value=&quot;2&quot;>Bar&lt;/option>
+   &lt;/select>
+
+{{{el-select options=opts values=vals}}}
+Context {opts: [&quot;Foo&quot;, &quot;Bar&quot;], vals: [1, 2]}
+→  &lt;select>
+     &lt;option value=&quot;1&quot;>Foo&lt;/option>
+     &lt;option value=&quot;2&quot;>Bar&lt;/option>
+   &lt;/select>
+
+{{{el-select options=opts values=vals selected=selected}}}
+Context {opts: [&quot;Foo&quot;, &quot;Bar&quot;], vals: [1, 2], selected:2}
+→  &lt;select>
+     &lt;option value=&quot;1&quot;>Foo&lt;/option>
+     &lt;option selected value=&quot;2&quot;>Bar&lt;/option>
+   &lt;/select>
+
+{{{el-select options=opts values=vals selected=selected}}}
+Context {opts: [&quot;Foo&quot;, &quot;Bar&quot;], vals: [1, 0], selected:0}
+→  &lt;select>
+     &lt;option value=&quot;1&quot;>Foo&lt;/option>
+     &lt;option selected value=&quot;0&quot;>Bar&lt;/option>
+   &lt;/select>
+
+{{{el-select options=opts values=vals selected=selected}}}
+Context {opts: [&quot;Foo&quot;, &quot;Bar&quot;], vals: [&quot;&quot;, &quot;a&quot;], selected:&quot;&quot;}
+→  &lt;select>
+     &lt;option selected value=&quot;&quot;>Foo&lt;/option>
+     &lt;option value=&quot;a&quot;>Bar&lt;/option>
+   &lt;/select>
+
+{{{el-select options=opts values=vals options-disabled=optionsDisabled}}}
+Context {opts: [&quot;Foo&quot;, &quot;Bar&quot;], vals: [1, 2], optionsDisabled:2}
+→  &lt;select>
+     &lt;option value=&quot;1&quot;>Foo&lt;/option>
+     &lt;option disabled value=&quot;2&quot;>Bar&lt;/option>
+   &lt;/select>
+
+{{{el-select options=opts values=vals selected=selected options-disabled=optionsDisabled}}}
+Context {opts: [{content:&quot;Foo&quot;, value:1, disabled:true}, {content:&quot;Bar&quot;, value:2, selected:true}], vals:[&quot;x&quot;, &quot;y&quot;], selected:&quot;x&quot;, optionsDisabled:&quot;y&quot; }
+→  &lt;select>
+     &lt;option selected value=&quot;x&quot;>Foo&lt;/option>
+     &lt;option disabled value=&quot;y&quot;>Bar&lt;/option>
+   &lt;/select>
+
+{{{el-select options=opts cue=cue}}}
+Context {opts: [{content:&quot;Foo&quot;, value:1}, {content:&quot;Bar&quot;, value:2}], cue: &quot;Please select&quot; }
+→  &lt;select>
+     &lt;option class=&quot;select-cue&quot; disabled selected>Please select&lt;/option>
+     &lt;option value=&quot;1&quot;>Foo&lt;/option>
+     &lt;option value=&quot;2&quot;>Bar&lt;/option>
+   &lt;/select>
+
+{{{el-select options=opts values=vals value=selected}}}
+Context {opts: [&quot;Foo&quot;, &quot;Bar&quot;], vals: [1, 2], selected:2}
+→  &lt;select>
+     &lt;option value=&quot;1&quot;>Foo&lt;/option>
+     &lt;option selected value=&quot;2&quot;>Bar&lt;/option>
+   &lt;/select></code></pre></div>
+            
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="handlebars.el.form.js.html">handlebars.el.form.js</a>, <a href="handlebars.el.form.js.html#line279">line 279</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+        
+            <h5>Parameters:</h5>
+            
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Array of option objects or strings</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>values</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Array of values</p>
+<p>If passed, trumps any value passed as part of the corresponding option object</p>
+<p>If no options are passed, values is used instead</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>selected</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Values which are selected</p>
+<p>If passed, trumps any selected value passed as part of the corresponding option object</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Alternative param to pass selected value</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options-disabled</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Values which are disabled</p>
+<p>If passed, trumps any disabled value passed as part of the corresponding option object</p>
+<p>NB. The parameter is options-disabled, so that disabled can still be used to disable the entire control</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>String to display as first element of select when no values has been selected</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+        
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3 class="modules">Modules</h3><ul><li><a href="module-handlebars%2525el%2525form.html">handlebars.el.form</a></li></ul><h3 class="template-helpers">Template helpers</h3><ul><li><a href="template-el-checkbox.html">el-checkbox</a></li><li><a href="template-el-field.html">el-field</a></li><li><a href="template-el-fieldset.html">el-fieldset</a></li><li><a href="template-el-file.html">el-file</a></li><li><a href="template-el-form.html">el-form</a></li><li><a href="template-el-hidden.html">el-hidden</a></li><li><a href="template-el-label.html">el-label</a></li><li><a href="template-el-message.html">el-message</a></li><li><a href="template-el-password.html">el-password</a></li><li><a href="template-el-radio.html">el-radio</a></li><li><a href="template-el-select.html">el-select</a></li><li><a href="template-el-submit.html">el-submit</a></li><li><a href="template-el-text.html">el-text</a></li><li><a href="template-el-textarea.html">el-textarea</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-beta1</a>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

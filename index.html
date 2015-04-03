@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/jquery-1.11.2.min.js"> </script>
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h2>Handlebars form helper</h2><pre class="prettyprint source"><code>{{{el-field name=&quot;foo&quot;}}}</code></pre><p>Content helper providing form inputs and controls for <a href="http://handlebarsjs.com">Handlebars</a> using <a href="http://el.handlebars.solidgoldpig.com">handlebars.el</a></p>
+<h3>Version</h3><p>1.0.0</p>
+<h3>Installation</h3><pre class="prettyprint source"><code>npm install handlebars.el.form</code></pre><h3>Registering the helper</h3><pre class="prettyprint source"><code> var Handlebars = require(&quot;handlebars&quot;);
+ var FormHelper = require(&quot;handlebars.el.form&quot;);
+ FormHelper.registerHelpers(Handlebars);</code></pre><h3>Using the helpers</h3><p>See <a href="http://el.form.handlebars.solidgoldpig.com">project website</a> for more detailed examples</p>
+<h4>el-field</h4><pre class="prettyprint source"><code>{{{el-field name=&quot;foo&quot;}}}
+    → «&lt;div class=&quot;control control-foo&quot;>&lt;label for=&quot;input-foo&quot;>Foo&lt;/label>&lt;div class=&quot;edit&quot;>&lt;input id=&quot;input-foo&quot; name=&quot;foo&quot; type=&quot;text&quot;>&lt;/div>&lt;/div>»</code></pre><ul>
+<li>Can render in edit or display mode</li>
+<li>Can output single and multiple inputs</li>
+<li>Take a Backbone-style model to provide value</li>
+<li>Take a key to provide labels, help and more</li>
+</ul>
+<p>See <a href="template-el-field.html">el-field</a></p>
+<h4>el-text</h4><pre class="prettyprint source"><code>{{{el-text name=&quot;foo&quot;}}}
+    → «&lt;input name=&quot;foo&quot; type=&quot;text&quot;>»</code></pre><p>See <a href="template-el-text.html">el-text</a></p>
+<h4>el-checkbox</h4><pre class="prettyprint source"><code>{{{el-checkbox name=&quot;foo&quot;}}}
+    → «&lt;input name=&quot;foo&quot; type=&quot;checkbox&quot; value=&quot;true&quot;>»</code></pre><p>See <a href="template-el-checkbox.html">el-checkbox</a></p>
+<h4>el-radio</h4><pre class="prettyprint source"><code>{{{el-radio name=&quot;foo&quot;}}}
+    → «&lt;input name=&quot;foo&quot; type=&quot;radio&quot;>»</code></pre><p>See <a href="template-el-radio.html">el-radio</a></p>
+<h4>el-password</h4><pre class="prettyprint source"><code>{{{el-password name=&quot;foo&quot;}}}
+    → «&lt;input name=&quot;foo&quot; type=&quot;password&quot;>»</code></pre><p>See <a href="template-el-password.html">el-password</a></p>
+<h4>el-file</h4><pre class="prettyprint source"><code>{{{el-file name=&quot;foo&quot;}}}
+    → «&lt;input name=&quot;foo&quot; type=&quot;file&quot;>»</code></pre><p>See <a href="template-el-file.html">el-file</a></p>
+<h4>el-hidden</h4><pre class="prettyprint source"><code>{{{el-hidden name=&quot;foo&quot;}}}
+    → «&lt;input name=&quot;foo&quot; type=&quot;hidden&quot;»</code></pre><p>See <a href="template-el-hidden.html">el-hidden</a></p>
+<h4>el-submit</h4><pre class="prettyprint source"><code>{{{el-submit}}}
+    → «&lt;input type=&quot;submit&quot;>»</code></pre><p>See <a href="template-el-submit.html">el-submit</a></p>
+<h4>el-textarea</h4><pre class="prettyprint source"><code>{{{el-textarea name=&quot;foo&quot;}}}
+    → «&lt;textarea name=&quot;foo&quot;>&lt;/textarea>»</code></pre><p>See <a href="template-el-textarea.html">el-textarea</a></p>
+<h4>el-select</h4><pre class="prettyprint source"><code>{{{el-select name=&quot;foo&quot; options=opts}}}
+Context {opts:[&quot;a&quot;, &quot;b&quot;]}
+    → «&lt;select name=&quot;foo&quot;>&lt;option value=&quot;a&quot;>a&lt;/option>&lt;option value=&quot;b&quot;>b&lt;/option>&lt;/select>»</code></pre><p>See <a href="template-el-select.html">el-select</a></p>
+<h4>el-form</h4><pre class="prettyprint source"><code>{{#el-form}}foo{{/el-form}}
+    → «&lt;form method=&quot;post&quot;>foo&lt;/form>»</code></pre><p>See <a href="template-el-form.html">el-form</a></p>
+<h4>el-label</h4><pre class="prettyprint source"><code>{{{el-label content=&quot;foo&quot;}}}
+    → «&lt;label>foo&lt;/label>»
+
+{{#el-label for=&quot;bar&quot;}}foo{{/el-label}}
+    → «&lt;label for=&quot;bar&quot;>foo&lt;/label>»</code></pre><p>See <a href="template-el-label.html">el-label</a></p>
+<h4>el-fieldset</h4><pre class="prettyprint source"><code>{{#el-fieldset legend=&quot;bar&quot;}}&lt;i>foo&lt;/i>{{/el-fieldset}}
+    → «&lt;fieldset>&lt;legend>&lt;span>bar&lt;/span>&lt;/legend>&lt;i>foo&lt;/i>&lt;/fieldset>»</code></pre><p>See <a href="template-el-fieldset.html">el-fieldset</a></p>
+<h3>Tests</h3><pre class="prettyprint source"><code>npm test</code></pre><p>To see output generated by tests</p>
+<pre class="prettyprint source"><code>npm run test:info</code></pre><p>or</p>
+<pre class="prettyprint source"><code>npm test -- --verbose --config loglevel info</code></pre></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3 class="modules">Modules</h3><ul><li><a href="module-handlebars%2525el%2525form.html">handlebars.el.form</a></li></ul><h3 class="template-helpers">Template helpers</h3><ul><li><a href="template-el-checkbox.html">el-checkbox</a></li><li><a href="template-el-field.html">el-field</a></li><li><a href="template-el-fieldset.html">el-fieldset</a></li><li><a href="template-el-file.html">el-file</a></li><li><a href="template-el-form.html">el-form</a></li><li><a href="template-el-hidden.html">el-hidden</a></li><li><a href="template-el-label.html">el-label</a></li><li><a href="template-el-message.html">el-message</a></li><li><a href="template-el-password.html">el-password</a></li><li><a href="template-el-radio.html">el-radio</a></li><li><a href="template-el-select.html">el-select</a></li><li><a href="template-el-submit.html">el-submit</a></li><li><a href="template-el-text.html">el-text</a></li><li><a href="template-el-textarea.html">el-textarea</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-beta1</a>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
