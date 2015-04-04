@@ -45,7 +45,7 @@
          * @returns {string} Form output
          */ 
         // TODO wizard
-        helpers["el-form"] = function() {
+        helpers["el-form"] = function () {
             var args = Array.prototype.slice.call(arguments);
             var options = args.pop();
             var hash = options.hash;
@@ -125,7 +125,7 @@
          * Since inputHelper in turn calls the *el* helper, accepts any parameter that the *el* helper takes
          * @return {string} Text input
          */
-        helpers["el-text"] = function() {
+        helpers["el-text"] = function () {
             var args = Array.prototype.slice.call(arguments);
             args.unshift("text");
             return inputHelper.apply(this, args);
@@ -158,7 +158,7 @@
          *     →  <input checked name="foo" type="checkbox" value="true">
          * @return {string} Checkbox input
          */
-        helpers["el-checkbox"] = function() {
+        helpers["el-checkbox"] = function () {
             var args = Array.prototype.slice.call(arguments);
             args.unshift("checkbox");
             args[args.length-1].hash["el-fallback-value"] = true;
@@ -177,7 +177,7 @@
          * Since inputHelper in turn calls the *el* helper, accepts any parameter that the *el* helper takes
          * @return {string} Radio input
          */
-        helpers["el-radio"] = function() {
+        helpers["el-radio"] = function () {
             var args = Array.prototype.slice.call(arguments);
             args.unshift("radio");
             return inputHelper.apply(this, args);
@@ -195,7 +195,7 @@
          * Since inputHelper in turn calls the *el* helper, accepts any parameter that the *el* helper takes
          * @return {string} Password input
          */
-        helpers["el-password"] = function() {
+        helpers["el-password"] = function () {
             var args = Array.prototype.slice.call(arguments);
             args.unshift("password");
             return inputHelper.apply(this, args);
@@ -213,7 +213,7 @@
          * Since inputHelper in turn calls the *el* helper, accepts any parameter that the *el* helper takes
          * @return {string} File input
          */
-        helpers["el-file"] = function() {
+        helpers["el-file"] = function () {
             var args = Array.prototype.slice.call(arguments);
             args.unshift("file");
             return inputHelper.apply(this, args);
@@ -231,7 +231,7 @@
          * Since inputHelper in turn calls the *el* helper, accepts any parameter that the *el* helper takes
          * @return {string} Hidden input
          */
-        helpers["el-hidden"] = function() {
+        helpers["el-hidden"] = function () {
             var args = Array.prototype.slice.call(arguments);
             args.unshift("hidden");
             return inputHelper.apply(this, args);
@@ -249,7 +249,7 @@
          * Since inputHelper in turn calls the *el* helper, accepts any parameter that the *el* helper takes
          * @return {string} Submit input
          */
-        helpers["el-submit"] = function() {
+        helpers["el-submit"] = function () {
             var args = Array.prototype.slice.call(arguments);
             args.unshift("submit");
             return inputHelper.apply(this, args);
@@ -265,12 +265,12 @@
          * @return {array} param
          */
         function normaliseParamArray (param) {
-             if (param !== undefined) {
+             if (param !== undefined && param !== null) {
                 if (!_.isArray(param)) {
                     param = [param];
                 }
-                for (var item in param) {
-                    param[item] = param[item].toString();
+                for (var i = 0; i < param.length; i++) {
+                    param[i] = param[i].toString();
                 }
             }
             return param;
@@ -389,7 +389,7 @@
          * 
          * @return {string} Select control
          */
-        helpers["el-select"] = function() {
+        helpers["el-select"] = function () {
             //TODO
             // map, mapcontent, mapvalue, optgroups
             var args = Array.prototype.slice.call(arguments);
@@ -492,7 +492,7 @@
          * Calls the *el* helper so accepts any parameter that the *el* helper takes
          * @return {string} Textarea control
          */
-        helpers["el-textarea"] = function() {
+        helpers["el-textarea"] = function () {
             var args = Array.prototype.slice.call(arguments);
             var hash = args[args.length-1].hash;
             //if (hash["el-control"] !== undefined && hash["el-control"] === false) {
@@ -534,7 +534,7 @@
          * Calls the *el* helper so accepts any parameter that the *el* helper takes
          * @return {string} Label for control
          */
-        helpers["el-label"] = function() {
+        helpers["el-label"] = function () {
             var args = Array.prototype.slice.call(arguments);
             var hash = args[args.length-1].hash;
             hash["el-tag"] = "label";
@@ -562,7 +562,7 @@
          * Calls the *el* helper so accepts any parameter that the *el* helper takes
          * @return {string} Fieldset
          */
-        helpers["el-fieldset"] = function() {
+        helpers["el-fieldset"] = function () {
             var args = Array.prototype.slice.call(arguments);
             var hash = args[args.length-1].hash;
             hash["el-tag"] = "fieldset";
@@ -594,7 +594,7 @@
          * Gets message block heading by using field.message.heading.{{type}} as a lookup key
          * @return {string} Message block for control
          */
-        helpers["el-message"] = function() {
+        helpers["el-message"] = function () {
             var args = Array.prototype.slice.call(arguments);
             var field = args.shift();
             var type = args.shift();
@@ -1122,7 +1122,7 @@
          * 
          * @return {string} Field control
          */
-        helpers["el-field"] = function() {
+        helpers["el-field"] = function () {
             var blocks = {};
             /**
              * @member blockList

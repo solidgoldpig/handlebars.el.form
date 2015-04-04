@@ -6,7 +6,7 @@ Content helper providing form inputs and controls for [Handlebars](http://handle
 
 ### Version
 
-1.0.1
+1.0.2
 
 ### Installation
 
