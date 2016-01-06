@@ -1,7 +1,7 @@
 {
     "name": "handlebars.el.form",
     "description": "Handlebars helper for generating form elements",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "main": "handlebars.el.form.js",
     "repository": {
         "type": "git",
@@ -21,7 +21,7 @@
         "control"
     ],
     "dependencies": {
-        "handlebars.el": "1.0.1",
+        "handlebars.el": "1.0.2",
         "handlebars.phrase": "1.0.4"
     },
     "devDependencies": {
